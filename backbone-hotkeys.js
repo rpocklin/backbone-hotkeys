@@ -1,9 +1,12 @@
 /*
 
-Adds hotkey binding to backbone nicely
-Include this script (and original hotkeys.js) file after backbone.js to override default view
+Adds hotkey binding to backbone nicely.
+
+Include this script (and original hotkeys.js) file after backbone.js to override default view.
 
 Tested with: backbone 0.9.2 and jQuery 1.7.2 and 1.8.3
+
+
 
 By default, hotkeys.js does not intercept keyup/keydown/keypress events
 when they occur within an input.  If you want this functionality (you may)
