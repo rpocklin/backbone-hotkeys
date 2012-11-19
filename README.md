@@ -1,6 +1,9 @@
 #About
 **Backbone Hotkeys** is an extension to the vanilla Backbone View which lets you easily add and remove handlers for keyboard events supporting almost any key combination.  Uses the *hotkey.js* library written by: [John Resig](http://github.com/jeresig/jquery.hotkeys) as a base, which was based off of the plugin by Tzury Bar Yochay: [jQuery.hotkeys](http://github.com/tzuryby/hotkeys)
 
+## Demo
+[Demo](http://htmlpreview.github.com/?https://github.com/rpocklin/backbone-hotkeys/master/example/index.html)
+
 ## Types
 Supported types are `'keydown'`and `'keyup'`.
 
