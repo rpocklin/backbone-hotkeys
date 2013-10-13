@@ -3,30 +3,31 @@ $(function() {
   App = {};
 
   App.ExampleView = Backbone.View.extend({
-    el:$('#example_container'),
+    el: '#example_container',
 
-    events:{
+    events: {
       'keydown[esc] body': 'hideAll',
       'keyup[Alt+h] body': 'toggleOne',
       'keyup[Alt+j] body': 'toggleTwo',
       'keyup[Alt+k] body': 'toggleThree',
       'keyup[Ctrl+m] body' : 'showAll'
     },
-    hideAll : function() {
-      $(this.el).hide();
+
+    hideAll : function(e) {
+      this.$el.fadeOut();
     },
     showAll : function() {
-      $(this.el).children().show();
-      $(this.el).show();
+      this.$el.children().fadeIn();
+      this.$el.fadeIn();
     },
     toggleOne: function() {
-      $(this.el).find('#one').toggle();
+      this.$el.find('#one').fadeToggle();
     },
     toggleTwo: function() {
-      $(this.el).find('#two').toggle();
+      this.$el.find('#two').fadeToggle();
     },
     toggleThree: function() {
-      $(this.el).find('#three').toggle();
+      this.$el.find('#three').fadeToggle();
     },
     initialize: function() {
       _.bindAll(this);
@@ -35,4 +36,5 @@ $(function() {
   });
 
   var example_view = new App.ExampleView();
+  console.log('ex: %o', example_view);
 });

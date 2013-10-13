@@ -1,5 +1,10 @@
+# Backbone-hotkeys  [![Build Status](https://secure.travis-ci.org/rpocklin/backbone-hotkeys.png)](http://travis-ci.org/rpocklin/backbone-hotkeys)
+
+
 #About
-**Backbone Hotkeys** is an extension to the vanilla Backbone View which lets you easily add and remove handlers for keyboard events supporting almost any key combination.  Uses the *hotkey.js* library written by: [John Resig](http://github.com/jeresig/jquery.hotkeys) as a base, which was based off of the plugin by Tzury Bar Yochay: [jQuery.hotkeys](https://github.com/tzuryby/jquery.hotkeys)
+**Backbone Hotkeys** is an extension to the standard Backbone View which lets you easily add and remove handlers for
+keyboard events supporting almost any key combination.  Uses the *hotkey.js* library written by: [John Resig]
+(http://github.com/jeresig/jquery.hotkeys).
 
 ## Demo
 [Demo](http://htmlpreview.github.com/?https://github.com/rpocklin/backbone-hotkeys/master/example/index.html)
@@ -13,19 +18,24 @@ Include *hotkeys.js* and *backbone-hotkeys.js* after *backbone.js* in your app.
 ## Example
 
     App.SomeView = Backbone.View.extend({
-      el:$('#some-id'),
+      el: 'some-container',
 
       events:{
 
-        'keyup[esc]       body': 'someMethod',  // hotkeys keymapping
-        'keyup[Alt+m]     body': 'someMethod',  // hotkeys keymapping
-        'keyup[Ctrl+left] body': 'someMethod'   // hotkeys keymapping
+        'keyup[esc]       body': 'someMethod',
+        'keyup[Alt+m]     body': 'someMethod',
+        'keyup[Ctrl+left] body': 'someMethod'
       }
+
     });
 
-
 ## Notes
-TBD.
+There are 4 arguments in the events binding, which are:
+  - keyup: when key action should trigger the event
+  - [esc]: the key (or key-combination, separated with +) to trigger the event
+  - body: the DOM element this should bind to (ie. event must bubble up to this).
+  - 'someMethod': The method to execute when a matching key combination is found (same as normal Backbone events).
+
 
 ## Compatibility
-Works with jQuery 1.7.2 and 1.8.3 and Backbone 0.9.2.
+Works with jQuery 1.8.3 and Backbone 1.1.0.
