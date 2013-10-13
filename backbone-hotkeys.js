@@ -1,4 +1,8 @@
 /*
+  Backbone Hotkeys 1.0
+  (c) 2012-2013 Robert Pocklington
+  Backbone-hotkeys may be freely distributed under the MIT license.
+
   adds hotkey binding to Backbone.js
   include after backbone.js to overload default view event binding
 

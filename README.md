@@ -1,5 +1,4 @@
-# Backbone-hotkeys  [![Build Status](https://secure.travis-ci.org/rpocklin/backbone-hotkeys.png)](http://travis-ci.org/rpocklin/backbone-hotkeys)
-
+# Backbone-hotkeys
 
 #About
 **Backbone Hotkeys** is an extension to the standard Backbone View which lets you easily add and remove handlers for
@@ -39,3 +38,6 @@ There are 4 arguments in the events binding, which are:
 
 ## Compatibility
 Works with jQuery 1.8.3 and Backbone 1.1.0.
+
+## License
+[MIT License](http://htmlpreview.github.com/?https://github.com/rpocklin/backbone-hotkeys/master/MIT-LICENSE.txt)
