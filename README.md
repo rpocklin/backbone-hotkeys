@@ -30,17 +30,18 @@
 
 ## Notes
   There are 4 arguments in the events binding, which are:
-    - keyup: when key action should trigger the event
-    - [esc]: the key (or key-combination, separated with +) to trigger the event
-    - body: the DOM element this should bind to (ie. event must bubble up to this).
-    - 'someMethod': The method to execute when a matching key combination is found (same as normal Backbone events).
+
+  * `keyup`: when key action should trigger the event
+  * `[esc]`: the key (or key-combination, separated with +) to trigger the event
+  * `body`: the DOM element this should bind to (ie. event must bubble up to this).
+  * `someMethod`: The method to execute when a matching key combination is found (same as normal Backbone events).
 
 ## Compatibility
   Works with jQuery 1.8.3 and Backbone 1.1.0.
 
 
 ## Todo
-  - Event delegation (using `listenTo` for more exotic event bindings)
+  * Event delegation (using `listenTo` for more exotic event bindings)
 
 ## License
   [MIT License](http://opensource.org/licenses/MIT)
