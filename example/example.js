@@ -6,35 +6,41 @@ $(function() {
     el: '#example_container',
 
     events: {
-      'keydown[esc] body': 'hideAll',
-      'keyup[Alt+h] body': 'toggleOne',
-      'keyup[Alt+j] body': 'toggleTwo',
-      'keyup[Alt+k] body': 'toggleThree',
-      'keyup[Ctrl+m] body' : 'showAll'
+      'keyup[Alt+h] #one:visible'      : 'hideOne',
+      'keyup[Alt+o] #one:not(:visible)': 'showOne',
+      'keyup[Alt+j]'  : 'toggleTwo',
+      'keyup[Alt+k]'  : 'toggleThree',
+      'keyup[esc]'    : 'hideAll',
+      'keyup[Ctrl+m]' : 'showAll'
     },
 
     hideAll : function(e) {
+      e.stopPropagation();
       this.$el.fadeOut();
     },
-    showAll : function() {
+    showAll : function(e) {
+      e.stopPropagation();
       this.$el.children().fadeIn();
       this.$el.fadeIn();
     },
-    toggleOne: function() {
-      this.$el.find('#one').fadeToggle();
+    hideOne: function(e) {
+      e.stopPropagation();
+      this.$('#one').fadeToggle();
     },
-    toggleTwo: function() {
-      this.$el.find('#two').fadeToggle();
+    showOne: function(e) {
+      e.stopPropagation();
+      this.$('#one').fadeToggle();
     },
-    toggleThree: function() {
-      this.$el.find('#three').fadeToggle();
+    toggleTwo: function(e) {
+      e.stopPropagation();
+      this.$('#two').fadeToggle();
     },
-    initialize: function() {
-      _.bindAll(this);
-      return this;
+    toggleThree: function(e) {
+      e.stopPropagation();
+      this.$('#three').fadeToggle();
     }
+
   });
 
   var example_view = new App.ExampleView();
-  console.log('ex: %o', example_view);
 });

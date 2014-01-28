@@ -5,6 +5,7 @@
 	"eqnull": true,
 	"expr": true,
 	"immed": true,
+  "loopfunc": true,
 	"noarg": true,
 	"onevar": false,
 	"quotmark": "single",

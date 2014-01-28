@@ -20,7 +20,6 @@
       el: 'some-container',
 
       events: {
-
         'keyup[esc]       body': 'someMethod',
         'keyup[Alt+m]     body': 'someMethod',
         'keyup[Ctrl+left] body': 'someMethod'
@@ -29,6 +28,8 @@
     });
 
 ## Notes
+  If a selector is defined on a hotkey event then it is used as a filter for the target function.
+
   There are 4 arguments in the events binding, which are:
 
   * `keyup`: when key action should trigger the event
@@ -39,9 +40,9 @@
 ## Compatibility
   Works with jQuery 1.8.3 and Backbone 1.1.0.
 
-
-## Todo
-  * Event delegation (using `listenTo` for more exotic event bindings)
+## Revision History
+  * 1.10 Bound to `document` as default and added jQuery selector parameter as filter for target function.
+  * 1.0  Initial release
 
 ## License
   [MIT License](http://opensource.org/licenses/MIT)
