@@ -12,7 +12,7 @@
   Supported types are `'keydown'`and `'keyup'`.
 
 ## How-to
-  Include *hotkeys.js* and *backbone-hotkeys.js* after *backbone.js* in your app.
+  Include *jquery.hotkeys.js* and *backbone-hotkeys.js* after *backbone.js* in your app.
 
 ## Example
 

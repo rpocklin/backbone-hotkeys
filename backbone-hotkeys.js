@@ -25,9 +25,13 @@
 
  */
 
-$(function() {
+(function(jQuery) {
   // Cached regex to split keys for `delegate`.
   var delegateEventSplitter = /^(\S+)\s*(.*)$/;
+
+  if (!jQuery.hotkeys) {
+    throw new Error('Error: You have not included the jQuery Hotkeys dependency!');
+  }
 
   Backbone.View = Backbone.View.extend({
 
@@ -88,4 +92,4 @@ $(function() {
       return this;
     }
   });
-});
+})(jQuery);
