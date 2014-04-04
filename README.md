@@ -2,7 +2,7 @@
 
 #About
   **Backbone Hotkeys** is an extension to the standard Backbone View which lets you easily add and remove handlers for
-  keyboard events supporting almost any key combination.  Uses the *hotkey.js* library written by: [John Resig]
+  keyboard events supporting almost any key combination.  Uses the *jquery.hotkey.js* library written by: [John Resig]
   (http://github.com/jeresig/jquery.hotkeys).
 
 ## Demo
