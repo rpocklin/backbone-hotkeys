@@ -6,7 +6,7 @@
   (http://github.com/jeresig/jquery.hotkeys).
 
 ## Demo
-  [Demo](http://htmlpreview.github.com/?https://github.com/rpocklin/backbone-hotkeys/master/example/index.html)
+  [Demo](https://rawgit.com/rpocklin/backbone-hotkeys/master/example/index.html)
 
 ## Event Types
   Supported types are `'keydown'`and `'keyup'`.
@@ -38,9 +38,10 @@
   * `someMethod`: The method to execute when a matching key combination is found (same as normal Backbone events).
 
 ## Compatibility
-  Works with jQuery 1.8.3 and Backbone 1.1.0.
+  Works with jQuery 1.8.3 and Backbone 1.1.2.
 
 ## Revision History
+  * 1.2  Added automatic event unbinding for events bound to `document` - see #4.
   * 1.10 Bound to `document` as default and added jQuery selector parameter as filter for target function.
   * 1.0  Initial release
 
