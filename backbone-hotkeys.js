@@ -51,7 +51,6 @@
         var eventName = match[1];
         var selector = match[2];
         var methodBound = _.bind(method, this);
-        eventName += '.delegateEvents' + this.cid;
 
         var hotkeysRegex = /(.*)\[(.*)\]/ ;
         var hotkeyEvent = eventName.match(hotkeysRegex);
@@ -61,6 +60,8 @@
           eventName = hotkeyEvent[1];
           keyCombination = hotkeyEvent[2];
         }
+
+        eventName += '.delegateEvents' + this.cid;
 
         if (!selector) {
           if (hotkeyEvent) {
@@ -90,6 +91,22 @@
         } // end loop
       }
       return this;
+    },
+
+    // removes any global bindings made in this view
+    undelegateHotkeyGlobalEvents: function() {
+      var view_events = '.delegateEvents' + this.cid;
+      $(document).off(view_events);
+    }
+  });
+
+  var stopListening = Backbone.View.prototype.stopListening;
+
+  // automatically undelegate global hotkey events as part of view cleanup
+  Backbone.View = Backbone.View.extend({
+    stopListening: function(obj, name, callback) {
+      stopListening.call(this, obj, name, callback);
+      this.undelegateHotkeyGlobalEvents();
     }
   });
 })(jQuery);

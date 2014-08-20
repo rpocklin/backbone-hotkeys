@@ -17,16 +17,18 @@
 </head>
 <body>
 
-<div id="example_container">
-  <div id="one">One</div>
-  <div id="two">Two</div>
-  <div id="three">Three</div>
-</div>
+  <div id="example_container">
+    <div id="one">One</div>
+    <div id="two">Two</div>
+    <div id="three">Three</div>
+  </div>
 
   <br/>
 
   <div class="box">
     <h2>Instructions</h2>
+
+      <h4>Basic</h4>
       <ul>
           <li>
               Alt + h hides 'One'
@@ -47,6 +49,16 @@
               Ctrl + m shows all
           </li>
       </ul>
+
+    <h4>Subviews (view console debugger)</h4>
+      <ul>
+        <li>Alt+1 creates a sub-view</li>
+        <li>Alt+2 fires a non-global event on a sub-view</li>
+        <li>Alt+3 fires a global event on a sub-view</li>
+        <li>Alt+4 deletes the sub-view</li>
+      </ul>
+  </div>
+  <div id="subview_container">
   </div>
   <script type="text/javascript" src="../lib/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="../lib/underscore.min.js"></script>
